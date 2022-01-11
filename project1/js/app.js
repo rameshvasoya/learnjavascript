@@ -65,7 +65,6 @@ function deleteNote(index) {
 
 //search Note
 let search = document.getElementById("searchTxt");
-
 search.addEventListener("input", function () {
   let inputVal = search.value;
   console.log("Input event fired!", inputVal);
@@ -75,8 +74,6 @@ search.addEventListener("input", function () {
     if (cardTxt.includes(inputVal)) {
       element.style.display = "block";
       element.style.color = "green";
-      element.addElements
-
       element.getElementsByTagName("p")[0].classList.add("blink_me");
     } else {
       element.style.display = "none";
