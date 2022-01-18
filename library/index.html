@@ -27,7 +27,7 @@
 
   <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <a class="navbar-brand" href="#">Magic Notes</a>
+      <a class="navbar-brand" href="#">Books Library</a>
       <button
         class="navbar-toggler"
         type="button"
@@ -64,39 +64,100 @@
     </nav>
 
     <div class="container my-3">
-      <h1>Welcome To Magic Notes</h1>
-      <div class="card">
+      <h1>Welcome to Book labrary</h1>
+      <div class="card mt-4">
         <div class="card-body">
-          <h5 class="card-title">Add a note</h5>
+          <h5 class="card-title">Add a book</h5>
+          <form id="libraryForm" action="">
           <div class="mb-3 mt-3">
             <label for="exampleFormControlInput1" class="form-label"
-              >Title</label
+              >Book Name</label
             >
             <input
               type="text"
               class="form-control"
-              id="addTitle"
-              placeholder="Enter Title:"
+              id="bookName"
+              placeholder="Book name:"
             />
           </div>
           <div class="form-group">
             <label for="exampleFormControlInput1" class="form-label"
-              >Description:</label
+              >Author Name:</label
             >
-            <textarea
+            <input
+              type="text"
               class="form-control"
-              id="addTxt"
-              rows="3"
-              placeholder="Enter Description:"
-            ></textarea>
+              id="authorName"
+              placeholder="Author name:"
+            />
           </div>
-          <button class="btn btn-primary" id="addBtn">Add Note</button>
+
+          <div class="form-check mt-1">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="radiotype"
+              id="fiction"
+              value="fiction"
+            />
+            <label class="form-check-label" for="flexRadioDefault1">
+              Fiction
+            </label>
+          </div>
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="radiotype"
+              id="programming"
+              value="programming"
+              checked
+            />
+            <label class="form-check-label" for="flexRadioDefault2">
+              Computer Programming
+            </label>
+          </div>
+          <div class="form-check mb-3">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="radiotype"
+              id="cooking"
+              checked
+            />
+            <label class="form-check-label" for="flexRadioDefault3">
+              Cooking
+            </label>
+          </div>
+
+          <button class="btn btn-primary" id="submit">Add Book</button>
+        </form>
         </div>
       </div>
       <hr />
-      <h1>Your Notes</h1>
+      <h1>Your Books</h1>
       <hr />
-      <div id="notes" class="row"></div>
+      <div id="notes" class="row">
+        <div class="col-12">
+          <table class="table table-striped">
+            <thead>
+          <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Author</th>
+            <th scope="col">Type</th>
+            
+          </tr>
+        </thead>
+        <tbody id="tableBody">
+          
+        
+        </tbody>
+      
+        </table>
+        </div>
+     
+
+      </div>
     </div>
 
     <script
